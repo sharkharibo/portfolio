@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css.css">
+  <title>Portfolio - Home</title>
+</head>
+<body>
+
+  <!-- Header : titre du site + image de présentation -->
+  <header>
+
+    <img src="images/pp.png" alt="Photo Quentin" width="140" height="140">
+    <nav class="my-element">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="activities.html">Activites</a></li>
+        <li><a href="images.html">Images</a></li>
+        <li><a href="video.html">Videos</a></li>
+        <li>    <button id="dark-mode-toggle">🌙 dark mode</button> </li>
+      </ul>
+    </nav>
+    <h1>About me</h1>
+  </header>
+
+
+  <!-- Div générale contenant des sections (au moins 2) -->
+  <div>
+    <!-- Section 1 -->
+    <section>
+      <article>
+        <h1>Hi i'm Quentin</h1>
+        <p>I'm currently student at Aubiere "IUT informatique".<br>Where I'm learning computer science.</p>
+      </article>
+
+      <article>
+        <h2>My Skills</h2>
+        <p style="font-size: 20px;"><img src="images/python.png" alt="python logo" width="20" height="20"> Python <br>
+          <img src="images/html.png" alt="html logo" width="20" height="20"> HTML<br>
+          <img src="images/sql.png" alt="sql logo" width="20" height="20"> SQL<br>
+          <img src="images/css.png" alt="css logo" width="20" height="20"> CSS
+        </p>
+      </article>
+    </section>
+    <section>
+      <article>
+        <div>
+        <h3>My goal is to improve my IT level</h3>
+        </div>
+      
+      </article>
+
+      <aside class="my-element">
+        <ul class="lien-list">
+          <li>
+            <a href="https://github.com/sharkharibo?tab=repositories" target="_blank" rel="noopener">
+              <img src="images/github.png" alt="GitHub logo" width="40" height="40">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener">
+              <img src="images/linkedln.png" alt="LinkedIn logo" width="40" height="40">
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <img src="images/Capture d’écran du 2025-10-31 18-13-22.png" alt="LinkedIn logo" height="250" width="auto">
+    </section>
+
+  </div>
+
+  <!-- Footer : informations d'identification + mail -->
+  <footer>
+    <p>CHEZE Quentin <br>Groupe: 2<br><a href="mail:Quentin.CHEZE@etu.uca.fr">Quentin.CHEZE@etu.uca.fr</a></p>
+  </footer>
+<script>
+  const toggle = document.getElementById('dark-mode-toggle');
+  const body = document.body;
+
+  // Vérifie le mode sauvegardé
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+    toggle.textContent = '☀️ Bright mode';
+  }
+
+  // Événement clic
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDark = body.classList.contains('dark-mode');
+    toggle.textContent = isDark ? '☀️ Bright mode' : '🌙 Dark mode';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+</script>
+
+</body>
+</html>

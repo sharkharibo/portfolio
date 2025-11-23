@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css.css">
+  <title>Portfolio - My activities</title>
+</head>
+<body>
+
+  <header>
+
+    <img src="images/pp.png" alt="Photo Quentin" width="140" height="140">
+    <nav class="my-element">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="activities.html">Activites</a></li>
+        <li><a href="images.html">Images</a></li>
+        <li><a href="video.html">Videos</a></li>
+        <li>    <button id="dark-mode-toggle">🌙 dark mode</button> </li>
+      </ul>
+    </nav>
+    <h1>Activities</h1>
+  </header>
+
+
+  <main>
+    <!-- Tableau présentant au moins 3 activités.
+         Exemple avec colspan/rowspan pour montrer la maîtrise -->
+    <section>
+      <h2>Activity Table</h2>
+      <table class="activity-table">
+        <thead>
+          <tr>
+            <th>Activity</th>
+            <th>Role / Description</th>
+            <th>Length</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2">Coding in class</td>
+            <td>6h per week in "classe de terminale"</td>
+            <td>1 year</td>
+          </tr>
+          <tr>
+            <td>4h per week in "classe de premiere"</td>
+            <td>1 year</td>
+          </tr>
+          <tr>
+            <td>Dev / Projects</td>
+            <td>Creation of games, small sites, scripts</td>
+            <td>2 years</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>CHEZE Quentin <br>Groupe: 2<br><a href="mail:Quentin.CHEZE@etu.uca.fr">Quentin.CHEZE@etu.uca.fr</a></p>
+  </footer>
+<script>
+  const toggle = document.getElementById('dark-mode-toggle');
+  const body = document.body;
+
+  // Vérifie le mode sauvegardé
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+    toggle.textContent = '☀️ Bright mode';
+  }
+
+  // Événement clic
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDark = body.classList.contains('dark-mode');
+    toggle.textContent = isDark ? '☀️ Bright mode' : '🌙 Dark mode';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+</script>
+
+</body>
+</html>

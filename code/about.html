@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css.css">
+  <title>Portfolio - About</title>
+</head>
+<body>
+
+  <header>
+
+    <img src="images/pp.png" alt="Photo Quentin" width="140" height="140">
+    <nav class="my-element">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="activities.html">Activites</a></li>
+        <li><a href="images.html">Images</a></li>
+        <li><a href="video.html">Videos</a></li>
+        <li>    <button id="dark-mode-toggle">🌙 dark mode</button> </li>
+      </ul>
+    </nav>
+    <h1>School and professional career</h1>
+  </header>
+    
+
+  <main>
+    <section>
+      <img src="images/parcour.png" alt="parcour" width="400">
+    </section>
+    <section>
+      <p>
+      In 2018, I join  "Collège Anne de Beaujeu" at Moulins, where I obtained my "brevet des collèges" in 2022.<br>
+      Then, I study in "Lycée théodore de Banville" , where I obtain my "baccalaureate" in mathematics and computer science, with an "math expert" option, in 2025.<br>
+      After that in 2025, I join the "BUT informatique" of Aubiere with option "Isima" secured parcour.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>CHEZE Quentin <br>Groupe: 2<br><a href="mail:Quentin.CHEZE@etu.uca.fr">Quentin.CHEZE@etu.uca.fr</a></p>
+  </footer>
+<script>
+  const toggle = document.getElementById('dark-mode-toggle');
+  const body = document.body;
+
+  // Vérifie le mode sauvegardé
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+    toggle.textContent = '☀️ Bright mode';
+  }
+
+  // Événement clic
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDark = body.classList.contains('dark-mode');
+    toggle.textContent = isDark ? '☀️ Bright mode' : '🌙 Dark mode';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+</script>
+
+</body>
+</html>
