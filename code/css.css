@@ -144,10 +144,16 @@ div ,nav{
   display: flex;
 }
 
-section {
-  
-  width: 80%;
+section1 {
+  width: 30%;
   padding: 10px;
+  text-align: center;
+}
+
+section2 {
+  width: 70%;
+  padding: 10px;
+  text-align: center;
 }
 
 aside.my-element {
@@ -283,7 +289,7 @@ a {vertical-align: middle;}
 /* Conteneur du diaporama */
 .slideshow-container a {
   display: block;
-  margin: 0 auto;        /* ✅ centre les images */
+  margin: 0 auto;
   max-width: 100%;
   height: auto;
 }
@@ -381,12 +387,3 @@ p {
 }
 
 
-/* Décalage léger des articles du premier bloc */
-section:first-of-type article {
-  margin-left: 80px; /* ajuste la valeur selon ton goût */
-}
-
-/* On garde la section du texte objectif en place */
-section:nth-of-type(2) article div {
-  margin-left: 0;
-}
